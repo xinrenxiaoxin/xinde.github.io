@@ -13,7 +13,7 @@
             <h3>Ask a Question:</h3>
             <input type="text" id="question" placeholder="Type your question here...">
             <button onclick="askQuestion()">Ask</button>
-            <p id="answer"></p>
+            <p id="answer">Your answer will appear here...</p>
         </div>
         <div class="interaction">
             <h3>Generate an Image:</h3>
@@ -53,10 +53,11 @@
             .then(response => response.json())
             .then(data => {
                 document.getElementById('imageResponse').innerText = 'Image generated successfully.';
-                document.getElementById('generatedImage').src = data.imageUrl; // 假定返回的数据中有图片的URL
+                document.getElementById('generatedImage').src = data.imageUrl; // Assuming the response includes an image URL
             })
             .catch(error => console.error('Error:', error));
         }
     </script>
 </body>
 </html>
+

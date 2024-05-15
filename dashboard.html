@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Translation and Image Enhancement</title>
+    <title>翻译和图像生成</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('beijing.jpg'); /* 设置背景图片 */
-            background-size: cover; /* 覆盖整个页面 */
-            background-position: center; /* 居中背景图片 */
+            background-image: url('beijing.jpg');
+            background-size: cover;
+            background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0; /* 移除默认边距 */
-            color: #fff; /* 文本颜色为白色 */
+            margin: 0;
+            color: #fff;
         }
         #left-section, #right-section {
             margin: 10px;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
-            border-radius: 8px; /* 圆角边框 */
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
         }
         .btn {
             padding: 8px 16px;
@@ -31,23 +31,23 @@
             background-color: #007bff;
             color: #fff;
             border-radius: 5px;
-            font-weight: bold; /* 加粗文字 */
+            font-weight: bold;
         }
         .btn:hover {
             background-color: #0056b3;
         }
-        #translation-box, #voice-input-box, #image-output, #beautify-input {
+        #translation-box, #voice-input-box, #image-output, #beautify-input, #translation-result {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
             border-radius: 5px;
             border: none;
-            background: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
-            color: #333; /* 深色文字 */
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
         }
         #image-output {
-            height: 200px; /* 设置图片高度 */
-            object-fit: contain; /* 避免图片变形 */
+            height: 200px;
+            object-fit: contain;
         }
         #beautify-section {
             margin-top: 20px;
@@ -56,28 +56,29 @@
 </head>
 <body>
     <div id="left-section">
-        <h2>Translation and Voice Input</h2>
+        <h2>翻译和语音输入</h2>
         <div>
-            <button class="btn">Voice Input</button>
-            <input type="text" id="voice-input-box" placeholder="Voice Input Text" readonly>
+            <button class="btn">语音输入</button>
+            <input type="text" id="voice-input-box" placeholder="语音输入文本" readonly>
         </div>
         <div>
-            <input type="text" id="translation-box" placeholder="Translation" readonly>
-            <button class="btn">Translate</button>
-            <button class="btn">Re-translate</button>
+            <input type="text" id="translation-box" placeholder="翻译" readonly>
+            <button class="btn">翻译</button>
+            <button class="btn">重新翻译</button>
         </div>
+        <input type="text" id="translation-result" placeholder="翻译结果" readonly>
     </div>
     <div id="right-section">
-        <h2>Image Output and Beautification</h2>
+        <h2>图像输出和美化</h2>
         <div>
-            <img src="#" id="image-output" alt="Generated Image" style="max-width: 100%;">
+            <img src="#" id="image-output" alt="生成的图像" style="max-width: 100%;">
         </div>
+        <button class="btn">生成图像</button>
         <div id="beautify-section">
-            <h3>Image Enhancement</h3>
-            <input type="text" id="beautify-input" placeholder="Enter your modification suggestions">
-            <button class="btn">Confirm</button>
+            <h3>图像美化</h3>
+            <input type="text" id="beautify-input" placeholder="输入您的修改建议">
+            <button class="btn">确认</button>
         </div>
     </div>
 </body>
 </html>
-

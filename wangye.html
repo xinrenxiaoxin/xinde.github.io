@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻译和图像生成</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('beijing.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+        #left-section, #right-section {
+            margin: 10px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+        .btn {
+            padding: 8px 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        #translation-box, #voice-input-box, #image-output, #beautify-input, #translation-result {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+        #image-output {
+            height: 200px;
+            object-fit: contain;
+        }
+        #beautify-section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="left-section">
+        <h2>翻译和语音输入</h2>
+        <div>
+            <button class="btn">语音输入</button>
+            <input type="text" id="voice-input-box" placeholder="语音输入文本" readonly>
+        </div>
+        <div>
+            <input type="text" id="translation-box" placeholder="翻译" readonly>
+            <button class="btn">翻译</button>
+            <button class="btn">重新翻译</button>
+        </div>
+        <input type="text" id="translation-result" placeholder="翻译结果" readonly>
+    </div>
+    <div id="right-section">
+        <h2>图像输出和美化</h2>
+        <div>
+            <img src="#" id="image-output" alt="生成的图像" style="max-width: 100%;">
+        </div>
+        <button class="btn">生成图像</button>
+        <div id="beautify-section">
+            <h3>图像美化</h3>
+            <input type="text" id="beautify-input" placeholder="输入您的修改建议">
+            <button class="btn">确认</button>
+        </div>
+    </div>
+</body>
+</html>
